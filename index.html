@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de la Semaine - Planifiez vos repas</title>
+    <meta name="description" content="Créez votre menu de la semaine personnalisé avec des fruits et légumes de saison. Gratuit et simple d'utilisation !">
+    
+    <style>
+        /* Réinitialisation */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Polices */
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Patrick+Hand&display=swap');
+        
+        /* Corps de la page */
+        body {
+            padding: 20px;
+            background: linear-gradient(135deg, #ffccd5 0%, #c9f5ff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            font-family: 'Patrick Hand', cursive;
+            gap: 20px;
+        }
+        
+        /* Sidebar gauche */
+        .sidebar-left {
+            width: 320px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ff9966;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+        
+        /* Sidebar droite */
+        .sidebar-right {
+            width: 280px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ff9966;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+        
+        .sidebar-title {
+            color: #ff6699;
+            font-size: 24px;
+            font-family: 'Bubblegum Sans', cursive;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 0 #ffcc00;
+        }
+        
+        /* Conteneur principal */
+        .menu-container {
+            width: 21cm;
+            height: 29.7cm;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border: 4px solid #ff9966;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        /* En-tête */
+        .header {
+            text-align: center;
+            margin: 10px 0 15px 0;
+            padding-bottom: 5px;
+        }
+        
+        h1 {
+            color: #ff6699;
+            margin: 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 0 #ffcc00;
+            font-family: 'Bubblegum Sans', cursive;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            color: #3399ff;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Patrick Hand', cursive;
+            margin-top: 5px;
+        }
+        
+        /* Liste des jours */
+        .days-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        /* Ligne pour chaque jour */
+        .day-row {
+            display: flex;
+            align-items: stretch;
+            background: linear-gradient(to right, #e6f7ff 0%, #fff0e6 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #66ccff;
+            min-height: 80px;
+            flex-shrink: 0;
+        }
+        
+        /* Cellule du jour */
+        .day-cell {
+            width: 130px;
+            background: linear-gradient(to bottom, #ff9966 0%, #ff6600 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 8px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #cc5200;
+            border-right: 2px solid #ff9966;
+            font-family: 'Bubblegum Sans', cursive;
+            font-size: 17px;
+        }
+        
+        .day-emoji {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .day-name {
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        
+        /* Repas */
+        .meals-row {
+            flex-grow: 1;
+            display: flex;
+            padding: 8px;
+            gap: 15px;
+        }
+        
+        .meal-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+        
+        .meal-title {
+            font-size: 15px;
+            color: #ff3366;
+            margin-bottom: 6px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        
+        .meal-emoji {
+            font-size: 20px;
+        }
+        
+        .meal-content {
+            flex-grow: 1;
+            padding: 10px;
+            border: 2px solid #99ddff;
+            border-radius: 10px;
+            background-color: #ffffe6;
+            font-size: 14px;
+            line-height: 1.3;
+            outline: none;
+            overflow-wrap: break-word;
+            resize: vertical;
+            min-height: 65px;
+            max-height: 90px;
+            font-family: 'Patrick Hand', cursive;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: auto;
+            transition: all 0.2s;
+        }
+        
+        .meal-content[contenteditable="true"]:focus {
+            border-color: #ff3366;
+            background-color: #ffffff;
+            justify-content: flex-start;
+            text-align: left;
+        }
+        
+        /* Sections sidebar */
+        .control-section {
+            background: #f0f9ff;
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid #99ddff;
+        }
+        
+        .section-title {
+            color: #ff3366;
+            font-size: 18px;
+            font-family: 'Bubblegum Sans', cursive;
+            margin-bottom: 12px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .control-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .control-btn {
+            padding: 14px 20px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Bubblegum Sans', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.2s;
+            box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+        }
+        
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+        }
+        
+        .control-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        }
+        
+        .print-btn {
+            background: linear-gradient(to bottom, #66cc33 0%, #339900 100%);
+            color: white;
+        }
+        
+        .reset-btn {
+            background: linear-gradient(to bottom, #ff6666 0%, #cc0000 100%);
+            color: white;
+        }
+        
+        .generate-btn {
+            background: linear-gradient(to bottom, #9966ff 0%, #6600cc 100%);
+            color: white;
+        }
+        
+        .inspiration-btn {
+            background: linear-gradient(to bottom, #ff9966 0%, #ff6600 100%);
+            color: white;
+        }
+        
+        /* Pense-bête */
+        .memo-section {
+            background: #fff9e6;
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid #ffcc00;
+            margin-bottom: 15px;
+        }
+        
+        .memo-title {
+            color: #ff3366;
+            font-size: 18px;
+            font-family: 'Bubblegum Sans', cursive;
+            margin-bottom: 12px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .memo-content {
+            width: 100%;
+            min-height: 120px;
+            max-height: 180px;
+            padding: 12px;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            background-color: white;
+            font-size: 14px;
+            line-height: 1.4;
+            font-family: 'Patrick Hand', cursive;
+            color: #333;
+            resize: vertical;
+            outline: none;
+            transition: all 0.2s;
+        }
+        
+        .memo-content:focus {
+            border-color: #ff9966;
+            box-shadow: 0 0 0 3px rgba(255, 153, 102, 0.2);
+        }
+        
+        /* Inspiration de saison */
+        .inspiration-section {
+            background: #e6fff0;
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid #66cc99;
+        }
+        
+        .inspiration-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #336633;
+            font-family: 'Patrick Hand', cursive;
+        }
+        
+        .seasonal-products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+            justify-content: center;
+        }
+        
+        .season-product {
+            background: white;
+            border: 1px solid #66cc99;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Émoticônes */
+        .emoji-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .emoji-category {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .emoji-category-title {
+            font-size: 20px;
+            color: #ff3366;
+            font-weight: bold;
+            font-family: 'Bubblegum Sans', cursive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 8px;
+        }
+        
+        .emoji-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            max-height: none;
+            padding: 5px;
+        }
+        
+        .emoji-btn {
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        
+        .emoji-btn:hover {
+            background: #ffcc00;
+            transform: scale(1.1);
+        }
+        
+        /* Indicateur */
+        .active-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff3366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: 'Patrick Hand', cursive;
+            font-weight: bold;
+            box-shadow: 0 3px 15px rgba(255, 51, 102, 0.3);
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        /* Impression */
+        @media print {
+            body {
+                background: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                display: block !important;
+            }
+            
+            .sidebar-left,
+            .sidebar-right {
+                display: none !important;
+            }
+            
+            .menu-container {
+                box-shadow: none !important;
+                border: 2px solid #ff9966 !important;
+                width: 100% !important;
+                height: auto !important;
+                padding: 15px !important;
+                border-radius: 0 !important;
+                page-break-inside: avoid !important;
+                margin: 0 auto !important;
+            }
+            
+            .subtitle,
+            .active-indicator {
+                display: none !important;
+            }
+            
+            .header {
+                margin: 10px 0 5px 0 !important;
+            }
+            
+            h1 {
+                font-size: 32px !important;
+                text-shadow: 1px 1px 0 #ffcc00 !important;
+                font-family: 'Bubblegum Sans', cursive !important;
+            }
+            
+            .days-list {
+                gap: 8px !important;
+            }
+            
+            .day-row {
+                min-height: 70px !important;
+                border: 1.5px solid #66ccff !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .day-cell {
+                width: 120px !important;
+                padding: 8px 5px !important;
+                font-family: 'Bubblegum Sans', cursive !important;
+            }
+            
+            .day-emoji {
+                font-size: 20px !important;
+            }
+            
+            .day-name {
+                font-size: 16px !important;
+                font-family: 'Bubblegum Sans', cursive !important;
+            }
+            
+            .meals-row {
+                padding: 6px !important;
+                gap: 12px !important;
+            }
+            
+            .meal-title {
+                font-size: 13px !important;
+                margin-bottom: 4px !important;
+                font-family: 'Bubblegum Sans', cursive !important;
+            }
+            
+            .meal-emoji {
+                font-size: 16px !important;
+            }
+            
+            .meal-content {
+                padding: 8px !important;
+                border: 1.5px solid #99ddff !important;
+                font-size: 13px !important;
+                min-height: 55px !important;
+                max-height: 75px !important;
+                background-color: #ffffe6 !important;
+                font-family: 'Patrick Hand', cursive !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 1600px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sidebar-left,
+            .sidebar-right {
+                width: 100%;
+                max-width: 21cm;
+                position: static;
+                margin-bottom: 20px;
+            }
+            
+            .menu-container {
+                width: 100%;
+                height: auto;
+                min-height: 29.7cm;
+            }
+            
+            .emoji-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar gauche SANS PUB -->
+    <div class="sidebar-left">
+        <div class="sidebar-title">🎮 Contrôles</div>
+        
+        <div class="control-section">
+            <div class="section-title">🎲 Générateur</div>
+            <div class="control-buttons">
+                <button class="control-btn generate-btn" id="generateMenuBtn">
+                    🎯 Générer un Menu Varié
+                </button>
+                <button class="control-btn inspiration-btn" id="seasonalInspirationBtn">
+                    🌱 Inspiration de Saison
+                </button>
+            </div>
+        </div>
+        
+        <div class="inspiration-section" id="inspirationSection">
+            <div class="memo-title">
+                🌿 Inspiration de Saison
+            </div>
+            <div class="inspiration-content" id="inspirationContent">
+                Clique sur "🌱 Inspiration de Saison" pour voir les fruits et légumes du moment !
+            </div>
+        </div>
+        
+        <div class="control-section">
+            <div class="section-title">⚙️ Actions</div>
+            <div class="control-buttons">
+                <button class="control-btn print-btn" id="printBtn">
+                    🖨️ Imprimer le Menu
+                </button>
+                <button class="control-btn reset-btn" id="resetBtn">
+                    🗑️ Effacer tous les Repas
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menu principal -->
+    <div class="menu-container">
+        <div class="active-indicator" id="activeIndicator">✏️ Clique sur une case repas pour commencer</div>
+        
+        <div class="menu-content">
+            <div class="header">
+                <h1>🍽️ MENU DE LA SEMAINE 🍽️</h1>
+                <div class="subtitle">Personnalise ton menu de la semaine !</div>
+            </div>
+            
+            <div class="days-list" id="daysList"></div>
+        </div>
+    </div>
+    
+    <!-- Sidebar droite -->
+    <div class="sidebar-right">
+        <div class="memo-section">
+            <div class="memo-title">
+                📝 Mon Pense-bête
+            </div>
+            <textarea class="memo-content" id="memoContent" placeholder="Écris ici tes notes, idées de repas, courses à faire..."></textarea>
+        </div>
+        
+        <div class="sidebar-title">🍕 Émoticônes Nourriture</div>
+        
+        <div class="emoji-section">
+            <div class="emoji-category">
+                <div class="emoji-category-title">
+                    <span>🍎 Fruits & Légumes & 🍔 Plats</span>
+                </div>
+                <div class="emoji-container" id="emojiContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========== JAVASCRIPT SANS PUB ===========
+        const daysData = [
+            { name: "LUNDI", emoji: "📅", meals: ["", ""] },
+            { name: "MARDI", emoji: "📚", meals: ["", ""] },
+            { name: "MERCREDI", emoji: "🌈", meals: ["", ""] },
+            { name: "JEUDI", emoji: "🎯", meals: ["", ""] },
+            { name: "VENDREDI", emoji: "🎉", meals: ["", ""] },
+            { name: "SAMEDI", emoji: "🌟", meals: ["", ""] },
+            { name: "DIMANCHE", emoji: "☕", meals: ["", ""] }
+        ];
+
+        const mealTitles = [
+            { name: "DÉJEUNER", emoji: "🍽️" },
+            { name: "DÎNER", emoji: "🍲" }
+        ];
+
+        const foodEmojis = {
+            fruits: ["🍎", "🍌", "🍇", "🍓", "🍊", "🍉", "🍑", "🍍", "🥝", "🍒"],
+            legumes: ["🥦", "🥕", "🍅", "🥒", "🥬", "🌽", "🥔", "🍆", "🫑", "🧅"],
+            plats: ["🍕", "🍔", "🌭", "🥪", "🍝", "🍜", "🍛", "🍣", "🍱", "🥘"],
+            viandes: ["🍗", "🥩", "🍖", "🦴", "🥓"],
+            poissons: ["🐟", "🐠", "🦐", "🦞", "🦀", "🐙"],
+            desserts: ["🍰", "🎂", "🍦", "🍨", "🍩", "🍪", "🧁", "🍫"],
+            boissons: ["🥛", "🧃", "🍹", "🥤", "🧋", "🍵", "☕"],
+            divers: ["🥚", "🧀", "🍞", "🥨", "🥞", "🧇", "🥗", "🌮"]
+        };
+
+        const seasonalData = {
+            hiver: {
+                emoji: "⛄",
+                fruits: [
+                    { name: "Clémentines", emoji: "🍊" },
+                    { name: "Kiwi", emoji: "🥝" },
+                    { name: "Poires", emoji: "🍐" },
+                    { name: "Pommes", emoji: "🍎" },
+                    { name: "Orange", emoji: "🍊" },
+                    { name: "Citron", emoji: "🍋" }
+                ],
+                legumes: [
+                    { name: "Poireaux", emoji: "🧅" },
+                    { name: "Chou-fleur", emoji: "🥦" },
+                    { name: "Carottes", emoji: "🥕" },
+                    { name: "Endives", emoji: "🥬" },
+                    { name: "Betterave", emoji: "🟣" },
+                    { name: "Céleri", emoji: "🌿" }
+                ]
+            },
+            printemps: {
+                emoji: "🌸",
+                fruits: [
+                    { name: "Fraise", emoji: "🍓" },
+                    { name: "Rhubarbe", emoji: "🌱" },
+                    { name: "Cerise", emoji: "🍒" },
+                    { name: "Framboise", emoji: "🍓" },
+                    { name: "Pomme", emoji: "🍎" },
+                    { name: "Kiwi", emoji: "🥝" }
+                ],
+                legumes: [
+                    { name: "Asperges", emoji: "🌱" },
+                    { name: "Petits pois", emoji: "🟢" },
+                    { name: "Radis", emoji: "🌶️" },
+                    { name: "Artichaut", emoji: "🥬" },
+                    { name: "Épinards", emoji: "🥬" },
+                    { name: "Laitue", emoji: "🥬" }
+                ]
+            },
+            ete: {
+                emoji: "☀️",
+                fruits: [
+                    { name: "Pêche", emoji: "🍑" },
+                    { name: "Abricot", emoji: "🍑" },
+                    { name: "Melon", emoji: "🍈" },
+                    { name: "Pastèque", emoji: "🍉" },
+                    { name: "Figue", emoji: "🟣" },
+                    { name: "Prune", emoji: "🟣" }
+                ],
+                legumes: [
+                    { name: "Tomate", emoji: "🍅" },
+                    { name: "Courgette", emoji: "🥒" },
+                    { name: "Aubergine", emoji: "🍆" },
+                    { name: "Poivron", emoji: "🫑" },
+                    { name: "Haricot vert", emoji: "🟢" },
+                    { name: "Concombre", emoji: "🥒" }
+                ]
+            },
+            automne: {
+                emoji: "🍂",
+                fruits: [
+                    { name: "Raisin", emoji: "🍇" },
+                    { name: "Figue", emoji: "🟣" },
+                    { name: "Noix", emoji: "🌰" },
+                    { name: "Châtaigne", emoji: "🌰" },
+                    { name: "Poire", emoji: "🍐" },
+                    { name: "Pomme", emoji: "🍎" }
+                ],
+                legumes: [
+                    { name: "Potiron", emoji: "🎃" },
+                    { name: "Courge", emoji: "🎃" },
+                    { name: "Champignon", emoji: "🍄" },
+                    { name: "Brocoli", emoji: "🥦" },
+                    { name: "Chou", emoji: "🥬" },
+                    { name: "Navet", emoji: "🥬" }
+                ]
+            }
+        };
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            initMenu();
+            initEmojis();
+            loadSavedData();
+            setupEventListeners();
+            generateSeasonalInspiration();
+            showActiveIndicator("✨ Prêt à créer ton menu ! Clique sur une case repas");
+        });
+
+        // Fonctions
+        function initMenu() {
+            const daysList = document.getElementById('daysList');
+            daysList.innerHTML = '';
+            
+            daysData.forEach((day, dayIndex) => {
+                const dayRow = document.createElement('div');
+                dayRow.className = 'day-row';
+                dayRow.id = `day-${dayIndex}`;
+                
+                const dayCell = document.createElement('div');
+                dayCell.className = 'day-cell';
+                dayCell.innerHTML = `
+                    <div class="day-emoji">${day.emoji}</div>
+                    <div class="day-name">${day.name}</div>
+                `;
+                dayRow.appendChild(dayCell);
+                
+                const mealsRow = document.createElement('div');
+                mealsRow.className = 'meals-row';
+                
+                mealTitles.forEach((meal, mealIndex) => {
+                    const mealBox = document.createElement('div');
+                    mealBox.className = 'meal-box';
+                    
+                    const mealTitle = document.createElement('div');
+                    mealTitle.className = 'meal-title';
+                    mealTitle.innerHTML = `
+                        <span class="meal-emoji">${meal.emoji}</span>
+                        <span>${meal.name}</span>
+                    `;
+                    
+                    const mealContent = document.createElement('div');
+                    mealContent.className = 'meal-content';
+                    mealContent.contentEditable = 'true';
+                    mealContent.dataset.day = dayIndex;
+                    mealContent.dataset.meal = mealIndex;
+                    mealContent.spellcheck = false;
+                    mealContent.placeholder = "Clique pour écrire...";
+                    mealContent.textContent = day.meals[mealIndex];
+                    
+                    mealBox.appendChild(mealTitle);
+                    mealBox.appendChild(mealContent);
+                    mealsRow.appendChild(mealBox);
+                });
+                
+                dayRow.appendChild(mealsRow);
+                daysList.appendChild(dayRow);
+            });
+        }
+
+        function initEmojis() {
+            const emojiContainer = document.getElementById('emojiContainer');
+            emojiContainer.innerHTML = '';
+            
+            const allEmojis = [
+                ...foodEmojis.fruits,
+                ...foodEmojis.legumes,
+                ...foodEmojis.plats,
+                ...foodEmojis.viandes,
+                ...foodEmojis.poissons,
+                ...foodEmojis.desserts,
+                ...foodEmojis.boissons,
+                ...foodEmojis.divers
+            ];
+            
+            const uniqueEmojis = [...new Set(allEmojis)];
+            
+            uniqueEmojis.forEach(emoji => {
+                const emojiBtn = document.createElement('button');
+                emojiBtn.className = 'emoji-btn';
+                emojiBtn.textContent = emoji;
+                emojiBtn.title = "Clique pour insérer";
+                emojiBtn.addEventListener('click', function() {
+                    insertEmojiIntoActiveField(emoji);
+                });
+                emojiContainer.appendChild(emojiBtn);
+            });
+        }
+
+        function insertEmojiIntoActiveField(emoji) {
+            const activeElement = document.activeElement;
+            if (activeElement.classList.contains('meal-content')) {
+                const selection = window.getSelection();
+                const range = selection.getRangeAt(0);
+                const textNode = document.createTextNode(emoji + ' ');
+                range.insertNode(textNode);
+                range.setStartAfter(textNode);
+                range.setEndAfter(textNode);
+                selection.removeAllRanges();
+                selection.addRange(range);
+                saveData();
+                showActiveIndicator(`✅ Emoji ajouté : ${emoji}`);
+            } else {
+                showActiveIndicator("⚠️ Clique d'abord sur une case repas !");
+            }
+        }
+
+        function generateRandomMenu() {
+            const mealIdeas = [
+                "Salade de pâtes", "Wrap poulet avocat", "Soupe + sandwich", "Quiche salade", 
+                "Poisson riz légumes", "Pâtes bolognaise", "Tartiflette", "Pizza maison", 
+                "Burger frites", "Tajine poulet", "Risotto aux champignons", "Gratin dauphinois",
+                "Lasagnes légumes", "Curry de pois chiches", "Tarte salée", "Chili con carne",
+                "Couscous végétarien", "Poulet rôti patates", "Ratatouille", "Hachis parmentier",
+                "Tartare de saumon", "Spaghettis carbonara", "Blanquette de veau", "Bœuf bourguignon"
+            ];
+            
+            daysData.forEach((day) => {
+                const ideasCopy = [...mealIdeas];
+                const shuffled = ideasCopy.sort(() => Math.random() - 0.5);
+                day.meals = [shuffled[0], shuffled[1]];
+            });
+            
+            initMenu();
+            saveData();
+            showActiveIndicator("🎲 Menu varié généré ! Personnalise-le selon tes goûts");
+        }
+
+        function getCurrentSeason() {
+            const month = new Date().getMonth();
+            if (month >= 11 || month <= 1) return "hiver";
+            if (month >= 2 && month <= 4) return "printemps";
+            if (month >= 5 && month <= 7) return "ete";
+            return "automne";
+        }
+
+        function generateSeasonalInspiration() {
+            const currentSeason = getCurrentSeason();
+            const seasonData = seasonalData[currentSeason];
+            const allProducts = [...seasonData.fruits, ...seasonData.legumes]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 4);
+            
+            const fruitCount = allProducts.filter(p => 
+                seasonData.fruits.some(f => f.name === p.name)
+            ).length;
+            const vegCount = 4 - fruitCount;
+            
+            const inspirationContent = document.getElementById('inspirationContent');
+            inspirationContent.innerHTML = `
+                <p><strong>Saison :</strong> ${currentSeason.charAt(0).toUpperCase() + currentSeason.slice(1)} ${seasonData.emoji}</p>
+                <p><strong>Fruits et légumes de saison :</strong></p>
+                <div class="seasonal-products">
+                    ${allProducts.map(p => 
+                        `<span class="season-product">${p.emoji} ${p.name}</span>`
+                    ).join('')}
+                </div>
+                <p style="margin-top:15px; font-size:13px; color:#339966;">
+                    💡 ${fruitCount} fruit(s) et ${vegCount} légume(s) sélectionné(s)
+                </p>
+            `;
+            
+            showActiveIndicator(`🌱 Inspiration ${currentSeason} mise à jour !`);
+        }
+
+        function saveData() {
+            const data = [];
+            document.querySelectorAll('.meal-content').forEach(element => {
+                const dayIndex = parseInt(element.dataset.day);
+                const mealIndex = parseInt(element.dataset.meal);
+                if (!data[dayIndex]) data[dayIndex] = [];
+                data[dayIndex][mealIndex] = element.textContent.trim();
+            });
+            localStorage.setItem('weeklyMenuData', JSON.stringify(data));
+            
+            const memoContent = document.getElementById('memoContent').value;
+            localStorage.setItem('weeklyMenuMemo', memoContent);
+        }
+
+        function loadSavedData() {
+            const savedData = localStorage.getItem('weeklyMenuData');
+            const savedMemo = localStorage.getItem('weeklyMenuMemo');
+            
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                data.forEach((dayMeals, dayIndex) => {
+                    if (dayMeals && daysData[dayIndex]) {
+                        daysData[dayIndex].meals = dayMeals;
+                    }
+                });
+                initMenu();
+            }
+            
+            if (savedMemo) {
+                document.getElementById('memoContent').value = savedMemo;
+            }
+        }
+
+        function resetAllMeals() {
+            if (confirm("⚠️ Es-tu sûr de vouloir effacer TOUS les repas ?")) {
+                daysData.forEach(day => {
+                    day.meals = ["", ""];
+                });
+                initMenu();
+                saveData();
+                showActiveIndicator("🗑️ Tous les repas ont été effacés");
+            }
+        }
+
+        function printMenu() {
+            saveData();
+            document.querySelector('.subtitle').style.display = 'none';
+            window.print();
+            setTimeout(() => {
+                document.querySelector('.subtitle').style.display = 'block';
+            }, 100);
+            showActiveIndicator("🖨️ Impression en cours...");
+        }
+
+        function showActiveIndicator(message) {
+            const indicator = document.getElementById('activeIndicator');
+            indicator.textContent = message;
+            indicator.style.display = 'block';
+            setTimeout(() => {
+                indicator.style.display = 'none';
+            }, 3000);
+        }
+
+        function setupEventListeners() {
+            document.getElementById('generateMenuBtn').addEventListener('click', generateRandomMenu);
+            document.getElementById('seasonalInspirationBtn').addEventListener('click', generateSeasonalInspiration);
+            document.getElementById('printBtn').addEventListener('click', printMenu);
+            document.getElementById('resetBtn').addEventListener('click', resetAllMeals);
+            
+            document.addEventListener('input', function(e) {
+                if (e.target.classList.contains('meal-content') || e.target.id === 'memoContent') {
+                    saveData();
+                }
+            });
+            
+            document.addEventListener('focusin', function(e) {
+                if (e.target.classList.contains('meal-content')) {
+                    showActiveIndicator("✏️ Écris ton repas ici... Tu peux aussi coller des émoticônes !");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
