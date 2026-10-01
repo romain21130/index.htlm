@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RM Home — Portail v1</title>
+<style>
+:root{--bg:#070c13;--card:#111923;--text:#eef5ff;--muted:#8fa0b5;--cy:#49c8ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070c13}}
+:root[data-theme="dark"]{--bg:#070c13}
+*{box-sizing:border-box}
+body{margin:0;padding:14px;background:radial-gradient(circle at 70% 5%,#111a2d,#070c13 60%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:760px;margin:auto}
+.b{font-size:11px;letter-spacing:.19em;color:#8fb3d3;font-weight:800}
+.c{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:12px;margin-top:8px}
+svg{display:block;width:100%;height:auto;border-radius:14px;background:#0a1018}
+.row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin:12px 4px 8px}
+#st{font-size:30px;font-weight:800}#sub{font-size:14px;color:var(--muted);text-align:right}
+.bar{height:6px;border-radius:3px;background:#1a2431;margin:0 4px 12px;overflow:hidden}
+#pg{height:100%;width:0;background:var(--cy)}
+.btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+button{min-height:64px;border-radius:16px;border:1px solid rgba(73,200,255,.28);background:#0d1520;color:var(--text);font-weight:700;font-size:17px;font-family:inherit;letter-spacing:.06em;cursor:pointer}
+button:active{background:#15263a}
+.n{font-size:11px;color:var(--muted);margin:10px 4px 0;line-height:1.5}
+.mv .bc{animation:bl 1s infinite}
+@keyframes bl{0%,49%{opacity:1}50%,100%{opacity:.25}}
+</style></head><body><div class="w">
+<div class="b">RM HOME / ACCÈS</div>
+<div class="c" id="card">
+<svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portail coulissant">
+<defs><linearGradient id="yd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1018"/><stop offset="1" stop-color="#0a1018"/></linearGradient>
+<clipPath id="cl"><rect x="192" y="0" width="368" height="290"/></clipPath><linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f4f6"/><stop offset=".45" stop-color="#aeb4bb"/><stop offset=".55" stop-color="#d9dde1"/><stop offset="1" stop-color="#8e959d"/></linearGradient></defs>
+<rect x="190" y="157" width="372" height="128" fill="url(#yd)"/>
+<!-- mur / pilier droit + boîte aux lettres -->
+<rect x="560" y="30" width="160" height="255" fill="#d7cbb5"/><rect x="596.5" y="147" width="87" height="38" rx="3" fill="#1c1e22"/><rect x="602" y="166" width="50" height="13" rx="1.5" fill="url(#chr)" stroke="#6c737b" stroke-width=".6"/><rect x="602.8" y="166.7" width="48.4" height="1.1" fill="#fff" fill-opacity=".65"/><text x="627" y="175.2" text-anchor="middle" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="7.2" font-weight="700" letter-spacing=".3" fill="#2b3038">Mangonaux</text>
+<!-- clôture gauche -->
+<rect x="0" y="168" width="130" height="90" fill="#23272d"/><path d="M0 190H130M0 212H130M0 234H130" stroke="#1a1d22" stroke-width="2"/><rect x="0" y="258" width="130" height="25" fill="#d7cbb5"/><rect x="0" y="256" width="134" height="5" fill="#c6baa2"/>
+<!-- vantail coulissant (seul élément animé) -->
+<g clip-path="url(#cl)"><g id="leaf"><rect x="190" y="157" width="283" height="126" fill="#2b3037"/><rect x="190" y="157" width="283" height="3" fill="#3c434d"/>
+<!-- panneaux fixes de droite (supposés) : roseaux + étroit -->
+<rect x="473" y="157" width="40" height="126" fill="#d9cfb9"/>
+<g stroke="#6d6552" stroke-width="2" fill="none"><path d="M490 270Q487 225 495 180"/><path d="M500 270Q503 230 499 195"/></g><g fill="#6d6552"><ellipse cx="495" cy="188" rx="3" ry="11"/><ellipse cx="499" cy="203" rx="3" ry="9"/></g>
+<rect x="511" y="157" width="48" height="126" fill="#2a2f35"/></g></g>
+<!-- pilier gauche + gyrophare + plaque -->
+<rect x="128" y="160" width="64" height="135" fill="#d8ccb4"/><rect x="122" y="155" width="76" height="10" fill="#c9bda5"/>
+<rect x="147" y="139" width="12" height="16" rx="3" fill="#ff8a1f" class="bc"/><g id="visiophone"><rect x="152.5" y="189" width="15" height="21" rx="3" fill="#e9ecef" stroke="#b3b8bf"/><circle cx="160" cy="196" r="3.6" fill="#22252e" stroke="#6d5bd0" stroke-width="1.2"/><circle cx="160" cy="204.5" r="1.8" fill="#8f979f"/></g>
+<!-- sol -->
+<rect x="0" y="283" width="720" height="47" fill="#3d3e41"/><rect x="0" y="283" width="720" height="2" fill="#5a5b5e"/>
+</svg>
+<div class="row"><div id="st">Fermé</div><div id="sub">—</div></div>
+<div class="bar"><div id="pg"></div></div>
+<div class="btns"><button id="bo">OUVRIR</button><button id="bs">STOP</button><button id="bc">FERMER</button></div>
+<div class="n">Mode démonstration : non relié à Home Assistant.<br>Entité : <b>cover.10028e9559_motor_control</b> • course ≈ 20,5 s • portail coulissant vers la gauche (panneaux décor inclus).</div>
+</div></div>
+<script>
+(function(){
+var FULL=20500,SLIDE=370,SLIDE_DIR=-1; // SLIDE_DIR : -1 = vers la gauche
+var G={p:0,from:0,to:0,t0:0,dur:0,moving:false,dir:null},last=null,raf=0;
+var $=function(i){return document.getElementById(i)},leaf=$('leaf'),card=$('card');
+function render(){
+  leaf.setAttribute('transform','translate('+(SLIDE_DIR*G.p*SLIDE).toFixed(1)+' 0)');
+  var t,s='';
+  if(G.moving){t=G.dir==='open'?'Ouverture…':'Fermeture…';var rem=Math.ceil(Math.abs(G.to-G.p)*FULL/1000);s='≈ '+rem+' s restantes'}
+  else if(G.p>=.999){t='Ouvert'}else if(G.p<=.001){t='Fermé'}else{t='Ouvert partiellement'}
+  if(!G.moving&&G.p>.001&&G.p<.999)s=Math.round(G.p*100)+' %';
+  $('st').textContent=t;$('sub').textContent=s||' ';
+  $('pg').style.width=(G.p*100).toFixed(1)+'%';
+  card.classList.toggle('mv',G.moving);
+}
+function loop(now){
+  if(G.moving){
+    var f=Math.min(1,(now-G.t0)/G.dur);
+    G.p=G.from+(G.to-G.from)*f;               // linéaire, jamais de saut
+    if(f>=1){G.p=G.to;G.moving=false;G.dir=null}
+  }
+  render();
+  raf=G.moving?requestAnimationFrame(loop):0;  // aucune boucle quand le portail est à l'arrêt
+}
+function start(dir){
+  var now=performance.now();
+  G.from=G.p;G.to=dir==='open'?1:0;G.t0=now;
+  G.dur=Math.max(250,FULL*Math.abs(G.to-G.p)); // reprend depuis la progression actuelle
+  G.moving=true;G.dir=dir;
+  if(!raf)raf=requestAnimationFrame(loop);
+}
+function stop(){G.moving=false;G.dir=null;render()}
+function press(dir){
+  if(RM.gate.command){RM.gate.command(dir)}      // plus tard : cover.open_cover / close_cover / stop_cover
+  if(dir==='stop')stop();else if(!(G.moving&&G.dir===dir))start(dir);
+}
+window.RM=window.RM||{};
+window.RM.gate={
+  command:null,
+  // État Home Assistant : 'open' | 'closed' | 'opening' | 'closing' (même logique que la V1)
+  onHaState:function(state){
+    var prev=last;last=state;
+    if(!G.moving){
+      if(state==='open')G.p=1;else if(state==='closed')G.p=0;
+      else if(state==='opening'&&prev!=='opening')start('open');
+      else if(state==='closing'&&prev!=='closing')start('close');
+    }
+    render();
+  }
+};
+$('bo').onclick=function(){press('open')};$('bs').onclick=function(){press('stop')};$('bc').onclick=function(){press('close')};
+render();
+})();
+</script></body></html>

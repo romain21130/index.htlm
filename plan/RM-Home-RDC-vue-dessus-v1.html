@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RM Home — RDC</title>
+<style>
+:root{--bg:#070c13;--card:#111923;--text:#eef5ff;--muted:#8fa0b5;--cy:#49c8ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070c13}}
+:root[data-theme="dark"]{--bg:#070c13}
+*{box-sizing:border-box}
+body{margin:0;padding:14px;background:radial-gradient(circle at 70% 5%,#111a2d,#070c13 60%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.h{max-width:1100px;margin:0 auto 10px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.b{font-size:11px;letter-spacing:.19em;color:#8fb3d3;font-weight:800}h1{margin:5px 0 0;font-size:22px}
+.n{font-size:12px;color:var(--muted);text-align:right}
+.c{max-width:1100px;margin:auto;background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:10px}
+svg{display:block;width:100%;height:auto;max-height:88vh;margin:auto;border-radius:14px;background:#0a1018}
+.lamp{cursor:pointer}.halo{opacity:0;transition:opacity .35s}.lamp.on .halo{opacity:1}
+.bulb{fill:#7d7050}.lamp.on .bulb{fill:#ffe2a0}
+.spot{fill:#f4f4f2}.lamp.on .spot{fill:#ffe9a8}
+.shoe{transition:transform .9s cubic-bezier(.34,1.56,.64,1)}
+#shoeA{transform:translate(296px,72px) rotate(-28deg)}#shoeB{transform:translate(324px,94px) rotate(37deg)}
+#egg-shoes.tidy #shoeA{transform:translate(200px,24px) rotate(0deg)}#egg-shoes.tidy #shoeB{transform:translate(200px,42px) rotate(0deg)}
+#egg-shoes .cap{opacity:0;transition:opacity .5s;font:600 7px system-ui,sans-serif;fill:#e6d9c4}#egg-shoes.tidy .cap{opacity:.85}
+</style></head><body>
+<div class="h"><div><div class="b">RM HOME / RDC</div><h1>Rez-de-chaussée — vue du dessus</h1></div>
+<div class="n">Géométrie v16 • 1 m = 100 unités<br>Démo locale : touche une lampe</div></div>
+<div class="c">
+<svg viewBox="-480 -28 1256 1179" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Salon vu du dessus">
+<defs>
+<pattern id="tile" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#6f6c69"/><rect x="45" width="45" height="45" fill="#726f6b"/><rect y="45" width="45" height="45" fill="#6b6865"/><rect x="45" y="45" width="45" height="45" fill="#706d6a"/><path d="M0 0H90M0 45H90M0 0V90M45 0V90" stroke="#5a5754" stroke-width="1.4" fill="none"/></pattern><pattern id="rat" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#b58f57"/><path d="M0 0L6 6M6 0L0 6" stroke="#8a6a3a" stroke-width=".8" opacity=".7"/></pattern><pattern id="fab" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0L4 4M4 0L0 4" stroke="#fff" stroke-width=".5" opacity=".18"/></pattern><radialGradient id="vig" gradientUnits="userSpaceOnUse" cx="205" cy="490" r="560"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></radialGradient><filter id="sh" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000" flood-opacity=".4"/></filter><pattern id="pebble" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#cfc4ae"/><circle cx="4" cy="4" r="3.2" fill="#e3dac8"/><circle cx="11" cy="8" r="3" fill="#bdb198"/><circle cx="5" cy="11" r="2.6" fill="#d9cfba"/></pattern>
+<pattern id="wood" width="50" height="140" patternUnits="userSpaceOnUse"><rect width="25" height="140" fill="#c48d4b"/><rect x="25" width="25" height="140" fill="#b98243"/><path d="M0 0V140M25 0V140" stroke="#8f6330" stroke-width="1.2"/><path d="M7 0C9 40 5 80 8 140M16 0C14 50 18 90 15 140M33 0C31 45 36 95 32 140M42 0C44 50 40 90 43 140" stroke="#a87438" stroke-width=".7" fill="none" opacity=".7"/></pattern>
+<pattern id="plaid" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#ddd2c2"/><path d="M0 7H14M7 0V14" stroke="#b9a58a" stroke-width="4" opacity=".55"/><path d="M0 0H14M0 0V14" stroke="#fff" stroke-width="1.5" opacity=".7"/></pattern>
+<radialGradient id="ga"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<radialGradient id="gb"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<radialGradient id="gt"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<radialGradient id="gwL" gradientUnits="userSpaceOnUse" cx="6" cy="455" r="80"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".5"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient><radialGradient id="gwR" gradientUnits="userSpaceOnUse" cx="404" cy="303" r="80"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".5"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<pattern id="mar" width="80" height="80" patternUnits="userSpaceOnUse"><rect width="80" height="80" fill="#eceef1"/><path d="M0 0H80M0 0V80" stroke="#cdd2d9" stroke-width="1.2"/><path d="M6 72C24 54 38 44 70 10" stroke="#b5bbc6" stroke-width=".9" fill="none" opacity=".7"/><path d="M0 34C18 36 30 24 48 30" stroke="#c3c8d1" stroke-width=".7" fill="none" opacity=".7"/></pattern>
+<pattern id="oak" width="40" height="120" patternUnits="userSpaceOnUse"><rect width="40" height="120" fill="#d6a869"/><path d="M0 0V120M20 0V120" stroke="#b9884a" stroke-width="1"/><path d="M8 0C10 40 6 80 9 120M30 0C28 50 32 90 29 120" stroke="#c39557" stroke-width=".7" fill="none"/></pattern>
+<radialGradient id="vigK" gradientUnits="userSpaceOnUse" cx="169" cy="276" r="330"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></radialGradient>
+<filter id="shK" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="4" stdDeviation="3.5" flood-color="#000" flood-opacity=".3"/></filter>
+<g id="pl"><ellipse cx="0" cy="-13" rx="7" ry="14"/><ellipse cx="0" cy="-13" rx="7" ry="14" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7" ry="14" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7" ry="14" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7" ry="14" transform="rotate(288)"/></g>
+<linearGradient id="inox" x1="0" x2="1"><stop offset="0" stop-color="#c9ced4"/><stop offset=".5" stop-color="#aab0b7"/><stop offset="1" stop-color="#c3c8ce"/></linearGradient><clipPath id="ck"><rect x="6" y="6" width="326" height="541"/></clipPath><radialGradient id="gk1"><stop class="s" offset="0" stop-color="#ffdca8" stop-opacity=".5"/><stop class="s" offset="1" stop-color="#ffdca8" stop-opacity="0"/></radialGradient><radialGradient id="gk2"><stop class="s" offset="0" stop-color="#ffdca8" stop-opacity=".5"/><stop class="s" offset="1" stop-color="#ffdca8" stop-opacity="0"/></radialGradient><clipPath id="cs"><rect x="-8" y="140" width="54" height="127"/></clipPath><radialGradient id="gk3"><stop class="s" offset="0" stop-color="#ffdca8" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffdca8" stop-opacity="0"/></radialGradient>
+<pattern id="cl" width="45" height="45" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#b9bbbe"/><path d="M0 0H45M0 0V45" stroke="#a2a5a9" stroke-width="1.2"/></pattern>
+<pattern id="cd" width="45" height="45" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#7c716a"/><path d="M0 0H45M0 0V45" stroke="#6a5f59" stroke-width="1.2"/></pattern>
+<pattern id="pg" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#d9bb7c"/><circle cx="4" cy="4" r="1.6" fill="#8a5f2e"/></pattern>
+<pattern id="bt" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#3b3129"/><circle cx="4.5" cy="4.5" r="3.2" fill="#1d1712"/></pattern>
+<radialGradient id="vigC" gradientUnits="userSpaceOnUse" cx="160" cy="212" r="270"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="shC" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="4" stdDeviation="3.5" flood-color="#000" flood-opacity=".3"/></filter>
+<clipPath id="cm"><path d="M6 6H314V274H214V418H6Z"/></clipPath><clipPath id="cr"><rect x="220" y="286" width="94" height="132"/></clipPath><radialGradient id="gm"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient><radialGradient id="gr"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<pattern id="lam" width="120" height="38" patternUnits="userSpaceOnUse"><rect width="120" height="38" fill="#d9ac7c"/><rect y="19" width="120" height="19" fill="#d3a473"/><path d="M0 0H120M0 19H120M40 0V19M100 19V38" stroke="#b98a5c" stroke-width=".8"/></pattern>
+<pattern id="stp" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#cfa46e"/><path d="M0 0H20M0 10H20" stroke="#a97c4a" stroke-width=".8"/></pattern>
+<clipPath id="cv"><rect x="6" y="6" width="403" height="134"/></clipPath>
+<radialGradient id="gv" gradientUnits="userSpaceOnUse" cx="267" cy="6" r="85"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigV" gradientUnits="userSpaceOnUse" cx="207" cy="73" r="230"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></radialGradient>
+<filter id="shV" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".3"/></filter>
+
+<pattern id="tc" width="45" height="45" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#58504b"/><path d="M0 0H45M0 0V45" stroke="#6d6560" stroke-width="1.2"/></pattern>
+<pattern id="pbC" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#cfc4ae"/><circle cx="4" cy="4" r="3.2" fill="#e3dac8"/><circle cx="11" cy="8" r="3" fill="#bdb198"/><circle cx="5" cy="11" r="2.6" fill="#d9cfba"/></pattern>
+<clipPath id="cc"><rect x="6" y="6" width="96" height="712"/></clipPath>
+<radialGradient id="gA0" gradientUnits="userSpaceOnUse" cx="102" cy="650" r="75"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<radialGradient id="gA1" gradientUnits="userSpaceOnUse" cx="102" cy="425" r="75"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<radialGradient id="gA2" gradientUnits="userSpaceOnUse" cx="102" cy="285" r="75"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigO" gradientUnits="userSpaceOnUse" cx="54" cy="362" r="400"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></radialGradient>
+<filter id="shO" x="-10%" y="-3%" width="120%" height="106%"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".3"/></filter>
+
+<pattern id="gl" width="120" height="38" patternUnits="userSpaceOnUse"><rect width="120" height="38" fill="#85817d"/><rect y="19" width="120" height="19" fill="#7d7975"/><path d="M0 0H120M0 19H120M40 0V19M100 19V38" stroke="#6b6864" stroke-width=".8"/></pattern>
+<clipPath id="cch"><rect x="6" y="6" width="331" height="464"/></clipPath>
+<radialGradient id="gCe"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".5"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient>
+<radialGradient id="gCn" gradientUnits="userSpaceOnUse" cx="6" cy="190" r="75"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<radialGradient id="gCs" gradientUnits="userSpaceOnUse" cx="6" cy="340" r="75"><stop class="s" offset="0" stop-color="#ffc878" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffc878" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigCh" gradientUnits="userSpaceOnUse" cx="171" cy="238" r="300"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="shC2" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="4" stdDeviation="3.5" flood-color="#000" flood-opacity=".32"/></filter>
+
+<pattern id="wt" width="45" height="45" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#8f9195"/><path d="M0 0H45M0 0V45" stroke="#a9abaf" stroke-width="1.2"/></pattern>
+<clipPath id="cw"><rect x="6" y="6" width="137" height="85"/></clipPath>
+<radialGradient id="gW"><stop class="s" offset="0" stop-color="#ffe2b0" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffe2b0" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigW" gradientUnits="userSpaceOnUse" cx="75" cy="48" r="100"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="shW" x="-5%" y="-8%" width="110%" height="116%"><feDropShadow dx="1.5" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".32"/></filter>
+
+<pattern id="sbt" width="45" height="45" patternUnits="userSpaceOnUse"><rect width="45" height="45" fill="#8f9195"/><path d="M0 0H45M0 0V45" stroke="#a9abaf" stroke-width="1.2"/></pattern>
+<pattern id="sbo" width="40" height="120" patternUnits="userSpaceOnUse"><rect width="40" height="120" fill="#d6a869"/><path d="M0 0V120M20 0V120" stroke="#b9884a" stroke-width="1"/></pattern>
+<clipPath id="csb"><path clip-rule="evenodd" d="M6 6H205V250H6Z M6 6H98V101H6Z"/></clipPath>
+<clipPath id="csd"><rect x="6" y="6" width="92" height="95"/></clipPath>
+<radialGradient id="gSB"><stop class="s" offset="0" stop-color="#ffe2b0" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffe2b0" stop-opacity="0"/></radialGradient>
+<radialGradient id="gSD"><stop class="s" offset="0" stop-color="#ffe2b0" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffe2b0" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigSB" gradientUnits="userSpaceOnUse" cx="105" cy="128" r="190"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="shSB" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".32"/></filter>
+
+<pattern id="gj" width="120" height="38" patternUnits="userSpaceOnUse"><rect width="120" height="38" fill="#8b8884"/><rect y="19" width="120" height="19" fill="#83807c"/><path d="M0 0H120M0 19H120M40 0V19M100 19V38" stroke="#726f6b" stroke-width=".8"/></pattern>
+<clipPath id="cj"><path d="M6 6H234V262H337V384H188V481H6Z"/></clipPath>
+<radialGradient id="gJ"><stop class="s" offset="0" stop-color="#ffe2b0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffe2b0" stop-opacity="0"/></radialGradient>
+<radialGradient id="vigJ" gradientUnits="userSpaceOnUse" cx="171" cy="243" r="330"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="shJ" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="2" dy="4" stdDeviation="3.5" flood-color="#000" flood-opacity=".32"/></filter>
+<radialGradient id="gS" gradientUnits="userSpaceOnUse" cx="54" cy="104" r="70"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".55"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient><pattern id="bet" width="48" height="48" patternUnits="userSpaceOnUse"><rect width="48" height="48" fill="#8d8f92"/><circle cx="7" cy="11" r="1.1" fill="#7b7d80"/><circle cx="30" cy="6" r="1" fill="#9a9c9f"/><circle cx="41" cy="25" r="1.2" fill="#7b7d80"/><circle cx="15" cy="34" r="1" fill="#9a9c9f"/><circle cx="26" cy="43" r="1.1" fill="#7b7d80"/><circle cx="3" cy="44" r="0.9" fill="#a4a6a9"/></pattern><clipPath id="cdb"><rect x="-451" y="983" width="784" height="125"/></clipPath><radialGradient id="gXa" gradientUnits="userSpaceOnUse" cx="-166" cy="983" r="85"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient><radialGradient id="gXb" gradientUnits="userSpaceOnUse" cx="54" cy="983" r="85"><stop class="s" offset="0" stop-color="#ffd9a0" stop-opacity=".6"/><stop class="s" offset="1" stop-color="#ffd9a0" stop-opacity="0"/></radialGradient></defs><g id="dalle-beton"><defs><linearGradient id="stsh" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset=".62" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".42"/></linearGradient></defs><rect x="-289" y="977" width="622" height="146" fill="url(#bet)"/><rect x="-451" y="977" width="27" height="146" fill="#747679"/><rect x="-451" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-450 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-424" y="977" width="27" height="146" fill="#7b7d80"/><rect x="-424" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-423 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-397" y="977" width="27" height="146" fill="#828487"/><rect x="-397" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-396 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-370" y="977" width="27" height="146" fill="#8a8c8f"/><rect x="-370" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-369 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-343" y="977" width="27" height="146" fill="#919396"/><rect x="-343" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-342 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-316" y="977" width="27" height="146" fill="#989a9d"/><rect x="-316" y="977" width="27" height="146" fill="url(#stsh)"/><path d="M-315 977V1123" stroke="#dfe1e4" stroke-width="1.3" stroke-opacity=".75"/><rect x="-451" y="977" width="784" height="146" fill="none" stroke="#6b6d70" stroke-width="2.5"/><rect x="-451" y="1108" width="784" height="15" fill="#e6e6e4"/><rect x="-451" y="1113.5" width="784" height="3.2" fill="#1c1f24"/><line x1="-451" y1="1111" x2="333" y2="1111" stroke="#1c1f24" stroke-width="5" stroke-dasharray="1.6 9"/></g>
+
+<!-- SOL + MURS (v16) -->
+<rect width="410" height="977" fill="url(#tile)"/>
+<rect x="0" y="0" width="410" height="977" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="398" height="965" fill="none" stroke="#000" stroke-opacity=".28" stroke-width="8"/>
+<!-- ouvertures v16 : arches couloir (gauche) + passage cuisine (droite) -->
+<rect x="-8" y="282" width="16" height="124" fill="url(#pebble)"/>
+<rect x="-8" y="746" width="16" height="88" fill="url(#pebble)"/>
+<rect x="402" y="564" width="16" height="127" fill="#e9e6e1"/>
+
+<g filter="url(#sh)">
+<!-- habillage pierre côté poêle -->
+<rect x="6" y="482" width="5" height="110" fill="#3a3835"/>
+
+<!-- meuble TV + TV -->
+<rect x="8" y="75" width="42" height="195" rx="2" fill="#1f1d1c" stroke="#d8b88a" stroke-width="2"/>
+<rect x="14" y="90" width="6" height="108" fill="#0e1014"/>
+<circle cx="36" cy="228" r="11" fill="#3c7d3a"/><circle cx="78" cy="26" r="11" fill="#3c7d3a"/>
+<rect x="100" y="8" width="55" height="10" fill="#b58a55"/>
+
+<!-- malle (droite, alignée au mur) -->
+<rect x="10" y="422" width="50" height="95" rx="2" fill="#5a3524"/><rect x="14" y="442" width="42" height="57" fill="#d9d4c6"/>
+<!-- poêle -->
+<circle cx="42" cy="546" r="27" fill="#efe9dd" stroke="#2a2a2a" stroke-width="2"/><circle cx="42" cy="546" r="19" fill="none" stroke="#c9c1b0" stroke-width="2"/><circle cx="36" cy="546" r="9" fill="#1b1b1b"/>
+<!-- tonneau + plante -->
+<circle cx="40" cy="936" r="31" fill="#dcb98a" stroke="#3a2a1a" stroke-width="3"/><circle cx="40" cy="936" r="14" fill="#2f3437"/><g fill="#4b7a3a"><ellipse cx="40" cy="936" rx="5" ry="20"/><ellipse cx="40" cy="936" rx="5" ry="20" transform="rotate(60 40 936)"/><ellipse cx="40" cy="936" rx="5" ry="20" transform="rotate(120 40 936)"/></g>
+
+<!-- canapé en L + chaise longue avec plaid -->
+<path d="M195 6H380V295H292V101H195Z" fill="#8d8b88" stroke="#6b6967" stroke-width="2"/><path d="M195 6H380V295H292V101H195Z" fill="url(#fab)"/><path d="M195 34H380M350 101V295M262 34V101M325 34V101M292 160H350M292 228H350" stroke="#5f5d5a" stroke-width="1.5" opacity=".6" fill="none"/>
+<rect x="125" y="6" width="70" height="95" fill="#8d8b88" stroke="#6b6967" stroke-width="2"/>
+<rect x="131" y="12" width="58" height="83" fill="url(#plaid)"/>
+<rect x="235" y="14" width="34" height="26" rx="4" fill="#a49f97"/><rect x="343" y="120" width="26" height="34" rx="4" fill="#a49f97"/>
+<!-- table basse -->
+<rect x="195" y="150" width="82" height="100" fill="url(#wood)" stroke="#5e4022" stroke-width="3"/>
+<rect x="212" y="170" width="22" height="26" fill="#7d2f3a"/><rect x="212" y="205" width="22" height="26" fill="#7d2f3a"/>
+
+<!-- petit meuble + buffet/vaisselier -->
+<rect x="384" y="255" width="24" height="60" fill="#d8c9a8" stroke="#a89670"/>
+<rect x="358" y="318" width="50" height="217" fill="#b8804a" stroke="#5e4022" stroke-width="2"/>
+<rect x="388" y="330" width="20" height="170" fill="#c99a62" stroke="#7a5630"/>
+<circle cx="380" cy="410" r="11" fill="#3c7d3a"/><circle cx="392" cy="510" r="12" fill="#3c7d3a"/>
+
+<!-- table à manger + centre + chaises -->
+<rect x="155" y="545" width="100" height="210" fill="url(#wood)" stroke="#5e4022" stroke-width="3"/>
+<circle cx="205" cy="640" r="14" fill="#3c7d3a"/><circle cx="188" cy="655" r="7" fill="#8a8a88"/><circle cx="208" cy="665" r="7" fill="#8a8a88"/>
+<g fill="url(#rat)" stroke="#6e5530" stroke-width="2">
+<rect x="104" y="560" width="46" height="46" rx="9"/><rect x="104" y="630" width="46" height="46" rx="9"/><rect x="104" y="700" width="46" height="46" rx="9"/>
+<rect x="260" y="560" width="46" height="46" rx="9"/><rect x="260" y="630" width="46" height="46" rx="9"/><rect x="260" y="700" width="46" height="46" rx="9"/>
+<rect x="182" y="497" width="46" height="44" rx="9"/><rect x="182" y="760" width="46" height="44" rx="9"/></g>
+
+<!-- bureau informatique -->
+<rect x="342" y="815" width="66" height="150" fill="url(#wood)" stroke="#5e4022" stroke-width="3"/>
+<rect x="396" y="878" width="7" height="50" fill="#1d6fd6"/><rect x="352" y="880" width="14" height="42" rx="2" fill="#1f2226"/>
+<rect x="392" y="942" width="14" height="16" fill="#9a9c9f"/><circle cx="392" cy="830" r="11" fill="#3c7d3a"/>
+<rect x="284" y="866" width="50" height="54" rx="14" fill="#1d222c"/>
+
+</g>
+<rect width="410" height="977" fill="url(#vig)" pointer-events="none"/>
+<!-- ÉCLAIRAGES — 3 zones séparées (overlays dynamiques, entités = placeholders) -->
+<g id="lamp-a" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salon_cage_1" transform="translate(205 190)">
+<circle class="halo" r="170" fill="url(#ga)"/><rect x="-9" y="-13" width="18" height="26" rx="3" fill="none" stroke="#111" stroke-width="2"/><circle class="bulb" r="4.5"/><circle r="30" fill="transparent"/></g>
+<g id="lamp-b" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salon_cage_2" transform="translate(205 410)">
+<circle class="halo" r="170" fill="url(#gb)"/><rect x="-9" y="-13" width="18" height="26" rx="3" fill="none" stroke="#111" stroke-width="2"/><circle class="bulb" r="4.5"/><circle r="30" fill="transparent"/></g>
+<g id="lamp-table" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salon_table" transform="translate(205 650)">
+<circle class="halo" r="230" fill="url(#gt)"/><rect x="-14" y="-47" width="28" height="94" fill="none" stroke="#111" stroke-width="2.5"/><circle class="bulb" cy="-30" r="5"/><circle class="bulb" r="5"/><circle class="bulb" cy="30" r="5"/><circle r="52" fill="transparent"/></g>
+<g id="lamp-applique-gauche" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salon_applique_gauche"><path class="halo" d="M6 375A80 80 0 0 1 6 535Z" fill="url(#gwL)"/><rect x="6" y="443" width="11" height="24" rx="5" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="11" cy="455" r="3.5"/><circle cx="12" cy="455" r="24" fill="transparent"/></g>
+<g id="lamp-applique-droite" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salon_applique_droite"><path class="halo" d="M404 223A80 80 0 0 0 404 383Z" fill="url(#gwR)"/><rect x="393" y="291" width="11" height="24" rx="5" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="399" cy="303" r="3.5"/><circle cx="398" cy="303" r="24" fill="transparent"/></g>
+<g transform="translate(410 424)">
+
+<!-- SOL + MURS (v16 : 338 × 553) -->
+<rect width="338" height="553" fill="url(#mar)"/>
+<rect width="338" height="553" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="326" height="541" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- ouvertures : arche salon (v16), porte cellier (photos), porte véranda (v16) -->
+<rect x="-8" y="140" width="8" height="127" fill="#e8e6e1"/><rect x="0" y="140" width="8" height="127" fill="#d6d3cc"/><path d="M0 140V267M8 140V267" stroke="#8d949c" stroke-width="1.5"/>
+<rect x="120" y="-8" width="90" height="16" fill="#d8dde2"/><rect x="120" y="-3" width="90" height="6" fill="#3a3d42"/>
+<rect x="238" y="545" width="80" height="16" fill="#8b653f"/><rect x="238" y="550" width="80" height="6" fill="#eceae6" stroke="#b8b6b0" stroke-width=".6"/>
+
+<g filter="url(#shK)">
+<!-- meuble café (mur ouest) : robot, micro-ondes, machine -->
+<rect x="6" y="20" width="50" height="120" rx="2" fill="#dcd9d4" stroke="#b5b2ab"/>
+<rect x="23" y="25" width="16" height="20" rx="3" fill="#1c1e22"/><circle cx="31" cy="36" r="9" fill="#c3c7cc" stroke="#7e848b"/><circle cx="31" cy="36" r="5.5" fill="#aeb3b9"/>
+<rect x="12" y="53" width="38" height="38" rx="2" fill="#9aa0a6" stroke="#565b61"/><rect x="16" y="57" width="30" height="30" fill="#7f858b"/>
+<circle cx="31" cy="72" r="13" fill="#c9a56d"/><circle cx="31" cy="72" r="9" fill="#f4f4f2" stroke="#c9c9c6"/>
+<rect x="9" y="116" width="44" height="22" rx="3" fill="#1c1e22"/><rect x="16" y="119" width="30" height="8" fill="#34373d"/>
+<!-- frigo américain -->
+<rect x="262" y="6" width="70" height="91" rx="2" fill="url(#inox)" stroke="#7c828a"/><rect x="261" y="40" width="2.5" height="17" rx="1" fill="#4f555c"/><rect x="261" y="60" width="2.5" height="17" rx="1" fill="#4f555c"/>
+<!-- plan de travail 2,60 m : tiroirs 80 + four 60 + 2 meubles 60 -->
+<rect x="272" y="97" width="60" height="260" fill="#dcd9d4" stroke="#b5b2ab"/>
+<rect x="276" y="178" width="52" height="58" rx="2" fill="#16181b"/><g fill="none" stroke="#4a4e57"><circle cx="291" cy="193" r="8"/><circle cx="313" cy="193" r="8"/><circle cx="291" cy="221" r="8"/><circle cx="313" cy="221" r="8"/></g>
+<rect x="280" y="242" width="44" height="38" fill="none" stroke="#8f959b" stroke-width="1.2"/><path d="M280 252H324M280 261H324M280 270H324" stroke="#8f959b" stroke-width=".8"/>
+<rect x="279" y="298" width="46" height="54" rx="3" fill="#15171a"/><circle cx="302" cy="294" r="3" fill="#8f959b"/>
+<rect x="302" y="360" width="30" height="28" rx="3" fill="#3a3d42" stroke="#d9bd2a" stroke-width="2"/><rect x="298" y="392" width="34" height="32" rx="4" fill="#1c1e22"/>
+<!-- tabouret sous le débord, îlot 2,10 m -->
+<circle cx="143" cy="160.5" r="16" fill="#c8975a" stroke="#1c1e22" stroke-width="2"/><circle cx="143" cy="392.5" r="16" fill="#c8975a" stroke="#1c1e22" stroke-width="2"/>
+<rect x="132" y="177.5" width="50" height="198" fill="#efece6" stroke="#b5b1a7"/>
+<rect x="100" y="171.5" width="86" height="210" rx="2" fill="url(#oak)" stroke="#7a5630" stroke-width="2"/>
+<!-- plantes -->
+<circle cx="88" cy="34" r="12" fill="#2a2f33"/><use href="#pl" fill="#2f6a3a" transform="translate(88 34) scale(1.15)"/>
+<circle cx="30" cy="350" r="15" fill="#2a2f33"/><use href="#pl" fill="#4f8f3f" transform="translate(30 350) scale(1.35)"/>
+</g>
+<rect width="338" height="553" fill="url(#vigK)" pointer-events="none"/>
+<g id="lamp-cuisine-plan" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_cuisine_plan_de_travail"><circle class="halo" cx="302" cy="123" r="52" fill="url(#gk1)" clip-path="url(#ck)"/><circle class="halo" cx="302" cy="175" r="52" fill="url(#gk1)" clip-path="url(#ck)"/><circle class="halo" cx="302" cy="227" r="52" fill="url(#gk1)" clip-path="url(#ck)"/><circle class="halo" cx="302" cy="279" r="52" fill="url(#gk1)" clip-path="url(#ck)"/><circle class="halo" cx="302" cy="331" r="52" fill="url(#gk1)" clip-path="url(#ck)"/><circle class="spot" cx="302" cy="123" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="302" cy="123" r="18" fill="transparent"/><circle class="spot" cx="302" cy="175" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="302" cy="175" r="18" fill="transparent"/><circle class="spot" cx="302" cy="227" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="302" cy="227" r="18" fill="transparent"/><circle class="spot" cx="302" cy="279" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="302" cy="279" r="18" fill="transparent"/><circle class="spot" cx="302" cy="331" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="302" cy="331" r="18" fill="transparent"/></g>
+<g id="lamp-cuisine-ilot" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_cuisine_ilot"><circle class="halo" cx="143" cy="108.5" r="64" fill="url(#gk2)" clip-path="url(#ck)"/><circle class="halo" cx="143" cy="192.5" r="64" fill="url(#gk2)" clip-path="url(#ck)"/><circle class="halo" cx="143" cy="276.5" r="64" fill="url(#gk2)" clip-path="url(#ck)"/><circle class="halo" cx="143" cy="360.5" r="64" fill="url(#gk2)" clip-path="url(#ck)"/><circle class="halo" cx="143" cy="444.5" r="64" fill="url(#gk2)" clip-path="url(#ck)"/><circle class="spot" cx="143" cy="108.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="143" cy="108.5" r="18" fill="transparent"/><circle class="spot" cx="143" cy="192.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="143" cy="192.5" r="18" fill="transparent"/><circle class="spot" cx="143" cy="276.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="143" cy="276.5" r="18" fill="transparent"/><circle class="spot" cx="143" cy="360.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="143" cy="360.5" r="18" fill="transparent"/><circle class="spot" cx="143" cy="444.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="143" cy="444.5" r="18" fill="transparent"/></g>
+
+<g id="lamp-escalier" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_escalier_salon_cuisine"><circle class="halo" cx="0" cy="203.5" r="44" fill="url(#gk3)" clip-path="url(#cs)"/><circle class="spot" cx="0" cy="203.5" r="4" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="0" cy="203.5" r="18" fill="transparent"/></g>
+</g>
+<g transform="translate(410 0)"><!-- SOL + MURS (v16 : 320 × 424) -->
+<rect width="320" height="424" fill="url(#cl)"/>
+<rect x="90" y="90" width="135" height="184" fill="url(#cd)"/>
+<rect width="320" height="424" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="308" height="412" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- renfoncement (v16 : 106 × 144, ouverture 80 cm sur son mur nord) -->
+<rect x="214" y="280" width="106" height="144" fill="url(#cl)" stroke="#263343" stroke-width="12"/>
+<rect x="227" y="272" width="80" height="16" fill="#b9bbbe"/>
+<!-- porte grise vers la cuisine (photos, absente du v16) -->
+<rect x="120" y="416" width="90" height="16" fill="#d8dde2"/><rect x="120" y="421" width="90" height="6" fill="#3a3d42"/>
+<g filter="url(#shC)">
+<!-- mur ouest, du nord au sud : casier, cave à pointes, bibliothèques, penderie ; chaussures au mur sud -->
+<rect x="6" y="28" width="35" height="90" rx="2" fill="url(#bt)" stroke="#2a221b"/>
+<rect x="6" y="118" width="30" height="70" fill="url(#pg)" stroke="#8a5f2e"/>
+<rect x="6" y="188" width="40" height="50" fill="#d9bb7c" stroke="#a88448"/><rect x="6" y="238" width="40" height="50" fill="#d9bb7c" stroke="#a88448"/>
+<rect x="6" y="288" width="44" height="58" rx="6" fill="#3f3b3e"/>
+<rect x="30" y="383" width="70" height="35" fill="#d9c39a" stroke="#a88f62"/><rect x="34" y="387" width="62" height="26" fill="#9aa0a4"/>
+<!-- mur nord : buffet, Kallax, tabouret -->
+<rect x="45" y="6" width="94" height="50" rx="2" fill="#5a3a26" stroke="#3a2416"/><rect x="50" y="11" width="84" height="40" fill="#6b4530"/>
+<rect x="139" y="6" width="80" height="39" fill="#e2c98f" stroke="#b39a5e"/><path d="M179 6V45M139 25.5H219" stroke="#b39a5e" stroke-width="1.5"/>
+
+<!-- mur est : congélateur, frigo, lave-linge + sèche-linge -->
+<rect x="249" y="16" width="65" height="130" rx="2" fill="#f3f3f1" stroke="#c2c2be"/><rect x="247" y="70" width="2.5" height="16" rx="1" fill="#8f959b"/>
+<rect x="254" y="146" width="60" height="60" rx="2" fill="#f3f3f1" stroke="#c2c2be"/><rect x="252" y="160" width="2.5" height="30" rx="1" fill="#8f959b"/>
+<rect x="254" y="206" width="60" height="60" rx="2" fill="#f6f6f4" stroke="#c2c2be"/><rect x="259" y="211" width="50" height="50" rx="2" fill="none" stroke="#dcdcd8"/>
+<!-- renfoncement : cumulus, armoire, coffre, seau -->
+<rect x="220" y="286" width="6" height="132" fill="#c9a271"/>
+<circle cx="272" cy="392" r="24" fill="#f2f3f4" stroke="#b9bcc0"/><circle cx="272" cy="392" r="18" fill="none" stroke="#d5d8db"/>
+<rect x="284" y="300" width="30" height="45" fill="#f4f4f2" stroke="#c2c2be"/>
+<rect x="224" y="330" width="36" height="36" rx="2" fill="#5b1f1f" stroke="#2a2a2a"/><circle cx="242" cy="306" r="11" fill="#2a2d31"/>
+</g>
+<rect width="320" height="424" fill="url(#vigC)" pointer-events="none"/>
+<g id="lamp-cellier-1" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_cellier_1"><circle class="halo" cx="148" cy="179" r="160" fill="url(#gm)" clip-path="url(#cm)"/><circle class="spot" cx="148" cy="179" r="6" stroke="#9aa0a6" stroke-width="1.5"/><circle cx="148" cy="179" r="24" fill="transparent"/></g>
+<g id="lamp-cellier-2" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_cellier_2"><circle class="halo" cx="270" cy="319" r="80" fill="url(#gr)" clip-path="url(#cr)"/><circle class="spot" cx="270" cy="319" r="5" stroke="#9aa0a6" stroke-width="1.5"/><circle cx="270" cy="319" r="20" fill="transparent"/></g>
+</g>
+<g transform="translate(333 977)"><!-- SOL + MURS (v16 : 415 × 146) -->
+<rect width="415" height="146" fill="url(#lam)"/>
+<rect width="415" height="146" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="403" height="134" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="8"/>
+<!-- porte cuisine (v16) + porte extérieure côté est (photos, absente du v16) -->
+<rect x="315" y="-8" width="80" height="16" fill="#cfa46e"/><rect x="315" y="-3" width="80" height="6" fill="#eceae6" stroke="#b8b6b0" stroke-width=".6"/>
+<rect x="407" y="45" width="16" height="80" fill="#8a8378"/><rect x="412" y="45" width="6" height="80" fill="#eceae6" stroke="#b8b6b0" stroke-width=".6"/>
+<g filter="url(#shV)">
+<rect x="309" y="6" width="92" height="24" fill="url(#stp)" stroke="#a97c4a"/>
+<rect x="125" y="6" width="150" height="70" rx="2" fill="#1f2226" stroke="#0e1012"/>
+<rect x="6" y="52" width="30" height="72" rx="2" fill="#d6b27a" stroke="#a88448"/>
+<g id="egg-shoes"><rect x="276" y="48" width="72" height="66" fill="transparent"/><g id="shoeA" class="shoe"><path d="M-15 0C-15-6-8-6.5-2-5.5C5-4.5 12-3.5 15-3V3C12 3.5 5 4.5-2 5.5C-8 6.5-15 6-15 0Z" fill="#f4f4f2" stroke="#8f8f8b" stroke-width=".9"/><path d="M-12.5 0C-12.5-4-7-4.5-2-3.8C4-3 9-2.5 11-2.2V2.2C9 2.5 4 3 -2 3.8C-7 4.5-12.5 4-12.5 0Z" fill="#c3c9d0"/><path d="M-2-3.5V3.5M2-3.5V3.5M6-3.5V3.5" stroke="#9aa0a6" stroke-width=".8"/><rect x="10" y="-2.5" width="4" height="5" rx="1.5" fill="#b9bec4"/></g><g id="shoeB" class="shoe"><path d="M-15 0C-15-6-8-6.5-2-5.5C5-4.5 12-3.5 15-3V3C12 3.5 5 4.5-2 5.5C-8 6.5-15 6-15 0Z" fill="#f4f4f2" stroke="#8f8f8b" stroke-width=".9"/><path d="M-12.5 0C-12.5-4-7-4.5-2-3.8C4-3 9-2.5 11-2.2V2.2C9 2.5 4 3 -2 3.8C-7 4.5-12.5 4-12.5 0Z" fill="#c3c9d0"/><path d="M-2-3.5V3.5M2-3.5V3.5M6-3.5V3.5" stroke="#9aa0a6" stroke-width=".8"/><rect x="10" y="-2.5" width="4" height="5" rx="1.5" fill="#b9bec4"/></g><text class="cap" text-anchor="middle"><tspan x="200" y="58">Encore Ellie qui a laissé</tspan><tspan x="200" y="67">traîner ses godasses</tspan></text></g>
+</g>
+<rect width="415" height="146" fill="url(#vigV)" pointer-events="none"/>
+<!-- applique double spot, mur cuisine, à l'ouest de la porte -->
+<g id="lamp-veranda-applique" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_veranda_applique"><path class="halo" d="M182 6A85 85 0 0 0 352 6Z" fill="url(#gv)" clip-path="url(#cv)"/><rect x="250" y="6" width="34" height="5" fill="#2a2d31"/><circle class="bulb" cx="258" cy="16" r="6" stroke="#1c1e22" stroke-width="2"/><circle class="bulb" cx="276" cy="16" r="6" stroke="#1c1e22" stroke-width="2"/><rect x="242" y="0" width="50" height="34" fill="transparent"/></g>
+</g>
+<g transform="translate(-108 253)"><!-- SOL + MURS (v16 : 108 × 724) -->
+<rect width="108" height="724" fill="url(#tc)"/>
+<rect width="108" height="724" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="96" height="712" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- ouvertures v16 : ouest (salle de jeu, WC, chambre), est (arches salon), nord (salle de bain), sud (entrée) -->
+<rect x="-8" y="21" width="16" height="72" fill="#d8d0c4"/><rect x="-8" y="153" width="16" height="64" fill="#d8dde2"/><rect x="-3" y="21" width="6" height="72" fill="#3a3d42"/><rect x="-3" y="153" width="6" height="64" fill="#3a3d42"/>
+<rect x="-8" y="497" width="16" height="80" fill="#6f6c69"/><rect x="-3" y="497" width="6" height="80" fill="#3a3d42"/>
+<rect x="100" y="29" width="16" height="124" fill="url(#pbC)"/><rect x="100" y="493" width="16" height="88" fill="url(#pbC)"/>
+<rect x="24" y="-8" width="60" height="16" fill="#d8dde2"/><rect x="24" y="-3" width="60" height="6" fill="#3a3d42"/>
+<rect x="14" y="716" width="80" height="16" fill="#b8b3a6"/><rect x="14" y="721" width="80" height="6" fill="#f2f0ec" stroke="#b8b6b0" stroke-width=".6"/>
+<g filter="url(#shO)">
+<!-- escalier ouvert (v16 : y 622-828), marches bois, main courante côté est -->
+<rect x="6" y="257" width="96" height="206" fill="#2f2622"/>
+<rect x="8" y="257" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="283" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="309" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="335" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="361" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="387" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="413" width="90" height="22" fill="#c9975a" stroke="#a3743f"/><rect x="8" y="439" width="90" height="22" fill="#c9975a" stroke="#a3743f"/>
+<rect x="99" y="257" width="2" height="206" fill="#6b7178"/>
+</g>
+<rect width="108" height="724" fill="url(#vigO)" pointer-events="none"/>
+<g id="lamp-couloir-a2" class="lamp" data-ha="live" data-entity="light.a2"><path class="halo" d="M102 210A75 75 0 0 0 102 360Z" fill="url(#gA2)" clip-path="url(#cc)"/><rect x="91" y="273" width="11" height="24" rx="5" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="97" cy="285" r="3.5"/><circle cx="96" cy="285" r="24" fill="transparent"/></g>
+<g id="lamp-couloir-a1" class="lamp" data-ha="live" data-entity="light.a1"><path class="halo" d="M102 350A75 75 0 0 0 102 500Z" fill="url(#gA1)" clip-path="url(#cc)"/><rect x="91" y="413" width="11" height="24" rx="5" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="97" cy="425" r="3.5"/><circle cx="96" cy="425" r="24" fill="transparent"/></g>
+<g id="lamp-couloir-a0" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_couloir_A0"><path class="halo" d="M102 575A75 75 0 0 0 102 725Z" fill="url(#gA0)" clip-path="url(#cc)"/><rect x="91" y="638" width="11" height="24" rx="5" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="97" cy="650" r="3.5"/><circle cx="96" cy="650" r="24" fill="transparent"/></g>
+<g id="lamp-couloir-spot" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_couloir_spot_nord"><circle class="halo" cx="54" cy="104" r="70" fill="url(#gS)" clip-path="url(#cc)"/><circle class="spot" cx="54" cy="104" r="4.5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="54" cy="104" r="20" fill="transparent"/></g>
+</g>
+<g transform="translate(-451 501)"><!-- SOL + MURS (v16 : 343 × 476) -->
+<rect width="343" height="476" fill="url(#gl)"/>
+<rect width="343" height="476" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="331" height="464" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- porte du couloir (v16), fermée -->
+<rect x="335" y="249" width="16" height="80" fill="#58504b"/><rect x="340" y="249" width="6" height="80" fill="#3a3d42"/>
+<g filter="url(#shC2)">
+<rect x="216" y="185" width="74" height="160" rx="2" fill="#d8ceb8" stroke="#bfb49b"/>
+<rect x="6" y="63" width="331" height="6" fill="#d9ccb4" stroke="#b8a98e"/>
+<circle cx="26" cy="422" r="18" fill="#dcc192" opacity=".85"/><circle cx="26" cy="422" r="8" fill="#c8b48e"/>
+<rect x="293" y="350" width="44" height="80" rx="2" fill="#d7b27a" stroke="#a88448"/><path d="M296 350V430" stroke="#efece6" stroke-width="2"/>
+<rect x="10" y="175" width="204" height="180" rx="2" fill="#c99a5b" stroke="#a3743f"/>
+<rect x="34" y="177" width="180" height="176" rx="6" fill="#f1efec" stroke="#d3cfc8"/>
+<rect x="12" y="188" width="40" height="66" rx="8" fill="#f4f2ef" stroke="#c9c5be"/><rect x="12" y="276" width="40" height="66" rx="8" fill="#f4f2ef" stroke="#c9c5be"/>
+<rect x="46" y="224" width="26" height="34" rx="5" fill="#d9a9a6"/><rect x="46" y="266" width="26" height="34" rx="5" fill="#d9a9a6"/>
+<rect x="4" y="170" width="7" height="190" fill="#d8b47a" stroke="#a88448"/>
+<rect x="6" y="135" width="40" height="40" rx="2" fill="#d6b078" stroke="#a88448"/><rect x="6" y="355" width="40" height="40" rx="2" fill="#d6b078" stroke="#a88448"/>
+</g>
+<rect width="343" height="476" fill="url(#vigCh)" pointer-events="none"/>
+<!-- plafond : disque bois + 3 spots ; tête de lit : 2 spots muraux -->
+<circle cx="171" cy="240" r="45" fill="#b58a52" fill-opacity=".16" stroke="#b58a52" stroke-opacity=".7" stroke-width="3"/>
+<g id="lamp-chambre-plafond" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_chambre_plafond"><circle class="halo" cx="148" cy="240" r="85" fill="url(#gCe)" clip-path="url(#cch)"/><circle class="halo" cx="171" cy="240" r="85" fill="url(#gCe)" clip-path="url(#cch)"/><circle class="halo" cx="194" cy="240" r="85" fill="url(#gCe)" clip-path="url(#cch)"/><circle class="spot" cx="148" cy="240" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle class="spot" cx="171" cy="240" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle class="spot" cx="194" cy="240" r="5" stroke="#9aa0a6" stroke-width="1.2"/><rect x="118" y="200" width="106" height="80" fill="transparent"/></g>
+<g id="lamp-chambre-tete-nord" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_chambre_tete_de_lit_nord"><path class="halo" d="M6 115A75 75 0 0 1 6 265Z" fill="url(#gCn)" clip-path="url(#cch)"/><rect x="3" y="182" width="9" height="16" rx="4" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="7.5" cy="190" r="3"/><circle cx="8" cy="190" r="24" fill="transparent"/></g>
+<g id="lamp-chambre-tete-sud" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_chambre_tete_de_lit_sud"><path class="halo" d="M6 265A75 75 0 0 1 6 415Z" fill="url(#gCs)" clip-path="url(#cch)"/><rect x="3" y="332" width="9" height="16" rx="4" fill="#b9bcc0" stroke="#7d8084"/><circle class="bulb" cx="7.5" cy="340" r="3"/><circle cx="8" cy="340" r="24" fill="transparent"/></g>
+</g>
+<g transform="translate(-257 390)"><!-- SOL + MURS (v16 : 149 × 97) -->
+<rect width="149" height="97" fill="url(#wt)"/>
+<rect width="149" height="97" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="137" height="85" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- porte du couloir (v16), fermée -->
+<rect x="141" y="16" width="16" height="64" fill="#58504b"/><rect x="146" y="16" width="6" height="64" fill="#3a3d42"/>
+<g filter="url(#shW)">
+<rect x="6" y="31" width="20" height="35" rx="3" fill="#eeeeec" stroke="#b9bcc0"/>
+<rect x="24" y="30" width="52" height="37" rx="18" fill="#f2f2f0" stroke="#b9bcc0"/>
+<rect x="28" y="32" width="46" height="33" rx="16" fill="none" stroke="#c9a46a" stroke-width="5"/>
+<ellipse cx="53" cy="48.5" rx="14" ry="10" fill="#d9dde0"/>
+<rect x="24" y="33" width="4" height="31" fill="#1c1e22"/>
+<rect x="92" y="58" width="38" height="33" rx="10" fill="#f4f4f2" stroke="#b9bcc0"/><ellipse cx="111" cy="76" rx="13" ry="10" fill="#e6e8ea" stroke="#c9ccd0"/><circle cx="111" cy="86" r="2.5" fill="#8f959b"/>
+<circle cx="82" cy="78" r="8" fill="#2a2d31" stroke="#8a6a3a" stroke-width="2"/>
+<rect x="8" y="12" width="10" height="10" fill="#c9a46a" stroke="#a88448"/>
+</g>
+<rect width="149" height="97" fill="url(#vigW)" pointer-events="none"/>
+<!-- point lumineux plafond -->
+<g id="lamp-wc" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_wc"><circle class="halo" cx="72" cy="48" r="70" fill="url(#gW)" clip-path="url(#cw)"/><circle class="spot" cx="72" cy="48" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="72" cy="48" r="24" fill="transparent"/></g>
+</g>
+<g transform="translate(-211 0)"><!-- SOL + MURS (v16 : 211 × 256) -->
+<rect width="211" height="256" fill="url(#sbt)"/>
+<rect width="211" height="256" fill="none" stroke="#263343" stroke-width="12"/><rect x="6" y="6" width="199" height="244" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- porte du couloir (centrée comme dans le couloir), fermée -->
+<rect x="127" y="248" width="60" height="16" fill="#58504b"/><rect x="127" y="253" width="60" height="6" fill="#3a3d42"/>
+<g filter="url(#shSB)">
+<rect x="6" y="11" width="92" height="90" fill="#f2f2f0" stroke="#c9ccd0"/><circle cx="52" cy="56" r="4" fill="#b9bcc0"/>
+<path d="M98 11V101H6" stroke="#8fc5d6" stroke-width="3" stroke-opacity=".8" fill="none"/><path d="M98 40V62" stroke="#c9ced3" stroke-width="2.5"/>
+<rect x="6" y="101" width="40" height="34" fill="#5a4c4f" stroke="#3a3033"/>
+<rect x="6" y="135" width="50" height="80" rx="2" fill="#f4f4f2" stroke="#c9ccd0"/><ellipse cx="30" cy="175" rx="16" ry="28" fill="#e6e8ea" stroke="#c9ccd0"/><circle cx="12" cy="175" r="2.5" fill="#8f959b"/>
+<rect x="6" y="215" width="40" height="34" fill="#5a4c4f" stroke="#3a3033"/>
+<rect x="111.5" y="6" width="80" height="44" rx="2" fill="url(#sbo)" stroke="#7a5630"/>
+<rect x="195" y="97" width="10" height="62" rx="2" fill="#f4f4f2" stroke="#c9ccd0"/><path d="M195 107H205M195 117H205M195 127H205M195 137H205M195 147H205" stroke="#c9ccd0" stroke-width=".8"/>
+<rect x="58" y="140" width="50" height="72" rx="8" fill="#35383d"/>
+</g>
+<rect width="211" height="256" fill="url(#vigSB)" pointer-events="none"/>
+<g id="lamp-sdb-douche" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_sdb_douche"><circle class="halo" cx="52" cy="56" r="60" fill="url(#gSD)" clip-path="url(#csd)"/><circle class="spot" cx="52" cy="56" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="52" cy="56" r="18" fill="transparent"/></g>
+<g id="lamp-sdb-plafond" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_sdb_plafond"><circle class="halo" cx="159" cy="56" r="70" fill="url(#gSB)" clip-path="url(#csb)"/><circle class="halo" cx="52" cy="163" r="70" fill="url(#gSB)" clip-path="url(#csb)"/><circle class="halo" cx="159" cy="163" r="70" fill="url(#gSB)" clip-path="url(#csb)"/><circle class="spot" cx="159" cy="56" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="159" cy="56" r="18" fill="transparent"/><circle class="spot" cx="52" cy="163" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="52" cy="163" r="18" fill="transparent"/><circle class="spot" cx="159" cy="163" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="159" cy="163" r="18" fill="transparent"/></g>
+</g>
+<g transform="translate(-451 0)"><!-- SOL + MURS (v16 : forme en L) -->
+<path d="M0 0H240V256H343V390H194V487H0Z" fill="url(#gj)" stroke="#263343" stroke-width="12"/>
+<path d="M6 6H234V262H337V384H188V481H6Z" fill="none" stroke="#000" stroke-opacity=".2" stroke-width="8"/>
+<!-- porte du couloir (v16), fermée -->
+<rect x="335" y="274" width="16" height="72" fill="#58504b"/><rect x="340" y="274" width="6" height="72" fill="#3a3d42"/>
+<g filter="url(#shJ)">
+<rect x="6" y="21" width="38" height="64" rx="2" fill="#f4f4f2" stroke="#c9ccd0"/><rect x="6" y="9" width="5" height="88" rx="1" fill="#0e1014" stroke="#3a3f47" stroke-width=".8"/>
+<rect x="6" y="136" width="52" height="276" rx="2" fill="#dcc296" stroke="#b39a6e"/><path d="M6 246H58M6 352H58" stroke="#b39a6e" stroke-width="1"/>
+<rect x="40" y="258" width="34" height="34" rx="12" fill="#f4f4f2" stroke="#c9ccd0"/><rect x="40" y="306" width="34" height="34" rx="12" fill="#f4f4f2" stroke="#c9ccd0"/>
+<rect x="158" y="12" width="76" height="238" rx="10" fill="#a29a90" stroke="#7d766c"/><rect x="212" y="12" width="22" height="238" rx="8" fill="#8f877d"/>
+<rect x="204" y="30" width="14" height="70" rx="6" fill="#8a8279"/><rect x="204" y="110" width="14" height="70" rx="6" fill="#8a8279"/><path d="M158 96H212M158 176H212" stroke="#7d766c" stroke-width="1.2"/>
+<rect x="154" y="396" width="38" height="77" fill="#f4f4f2" stroke="#c9ccd0"/><path d="M154 434.5H192M173 396V473" stroke="#c9ccd0" stroke-width="1.5"/>
+</g>
+<path d="M0 0H240V256H343V390H194V487H0Z" fill="url(#vigJ)" pointer-events="none"/>
+<g id="lamp-salle-de-jeu" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_salle_de_jeu"><circle class="halo" cx="63" cy="53" r="80" fill="url(#gJ)" clip-path="url(#cj)"/><circle class="halo" cx="177" cy="53" r="80" fill="url(#gJ)" clip-path="url(#cj)"/><circle class="halo" cx="97" cy="217" r="80" fill="url(#gJ)" clip-path="url(#cj)"/><circle class="halo" cx="97" cy="408" r="80" fill="url(#gJ)" clip-path="url(#cj)"/><circle class="halo" cx="270" cy="323" r="80" fill="url(#gJ)" clip-path="url(#cj)"/><circle class="spot" cx="63" cy="53" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="63" cy="53" r="18" fill="transparent"/><circle class="spot" cx="177" cy="53" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="177" cy="53" r="18" fill="transparent"/><circle class="spot" cx="97" cy="217" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="97" cy="217" r="18" fill="transparent"/><circle class="spot" cx="97" cy="408" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="97" cy="408" r="18" fill="transparent"/><circle class="spot" cx="270" cy="323" r="5" stroke="#9aa0a6" stroke-width="1.2"/><circle cx="270" cy="323" r="18" fill="transparent"/></g>
+</g>
+<g id="lamp-ext-gauche" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_exterieur_applique_gauche"><path class="halo" d="M-251 983A85 85 0 0 0 -81 983Z" fill="url(#gXa)" clip-path="url(#cdb)"/><rect x="-172" y="983" width="12" height="10" rx="2" fill="#1c1f24" stroke="#5a5f66"/><circle class="bulb" cx="-166" cy="988" r="3"/><circle cx="-166" cy="990" r="22" fill="transparent"/></g>
+<g id="lamp-ext-droite" class="lamp" data-ha="planned" data-entity="PLACEHOLDER_light_exterieur_applique_droite"><path class="halo" d="M-31 983A85 85 0 0 0 139 983Z" fill="url(#gXb)" clip-path="url(#cdb)"/><rect x="48" y="983" width="12" height="10" rx="2" fill="#1c1f24" stroke="#5a5f66"/><circle class="bulb" cx="54" cy="988" r="3"/><circle cx="54" cy="990" r="22" fill="transparent"/></g>
+</svg></div>
+<script>
+window.RM=window.RM||{};
+window.RM.setLight=function(id,on,br,rgb){var g=document.getElementById(id);if(!g)return;g.classList.toggle('on',!!on);g.querySelectorAll('.halo').forEach(function(h){h.style.opacity=on?(br==null?'':br):'';if(rgb){var m=/#[\w-]+/.exec(h.getAttribute('fill'));document.querySelectorAll(m[0]+' .s').forEach(function(s){s.setAttribute('stop-color','rgb('+rgb.join(',')+')')})}})};
+document.querySelectorAll('.lamp').forEach(function(g){g.addEventListener('click',function(){g.classList.toggle('on');g.querySelectorAll('.halo').forEach(function(h){h.style.opacity=''})})});
+</script>
+<script>(function(){var g=document.getElementById('egg-shoes'),t;if(!g)return;g.addEventListener('click',function(){clearTimeout(t);g.classList.add('tidy');t=setTimeout(function(){g.classList.remove('tidy')},5000)})})();</script></body></html>
